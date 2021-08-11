@@ -19,3 +19,4 @@ In the case of the DHT Sensor it is designed to use the 4 pin, or 3 pin types as
 
 ![AM2302](https://github.com/sjhilt/esphome-sensor/blob/main/images/IMG_1608.png)
 
+If you would like to make your own board, inside the board directory is Gerber files for PCB companies online. Or you can edit it here to make your own changes by cloning my project: https://easyeda.com/sjhilt/ha_sensor
