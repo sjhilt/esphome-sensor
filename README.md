@@ -8,6 +8,7 @@ Compoents are:
 * D1 Mini
 * DHT Tempature Sensor (DHT11, DHT22 or a AM2302 Sensor) 
 * BH1750 Light Sensor
+* Passive Infrared Sensor (PIR Sensor)
 
 
 ![](https://github.com/sjhilt/esphome-sensor/blob/main/Screen%20Shot%202021-07-27%20at%209.51.41%20AM.png)
