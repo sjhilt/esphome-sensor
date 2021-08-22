@@ -1,5 +1,5 @@
 esphome:
-  name: $devicename
+  name: ${devicename}
   platform: ESP8266
   board: d1_mini
 
@@ -19,7 +19,7 @@ wifi:
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "$roomname-sensor Fallback Hotspot"
+    ssid: "${roomname}-sensor Fallback Hotspot"
     password: !secret ap_password
 
 captive_portal:
@@ -38,7 +38,7 @@ output:
       inverted: true
 light:      
   - platform: monochromatic
-    name: "$roomname Temp Onboard LED"
+    name: "${roomname} Temp Onboard LED"
     output: onboard_led
     id: led
     
@@ -46,7 +46,7 @@ sensor:
   - platform: dht
     pin: RX
     temperature:
-      name: "$roomname Temperature"
+      name: "${roomname} Temperature"
       filters: 
         - lambda: return x * (9.0/5.0) + 32.0;
       unit_of_measurement: "°F" 
@@ -54,10 +54,10 @@ sensor:
       name: "$roomname Humidty"
     update_interval: 60s
   - platform: wifi_signal
-    name: "$roomname ESP WiFi Signal Sensor"
+    name: "${roomname} ESP WiFi Signal Sensor"
     update_interval: 300s
   - platform: bh1750
-    name: "$roomname light level"
+    name: "${roomname} light level"
     #address: 0x23
     measurement_duration: 69
     update_interval: 10s
@@ -67,3 +67,7 @@ binary_sensor:
     pin: GPIO16
     name: "$roombame Motion Sensor"
     device_class: motion
+    
+substitutions:
+  roomname: [change this]
+  devicename: [Change this]
