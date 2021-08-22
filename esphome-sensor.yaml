@@ -51,7 +51,7 @@ sensor:
         - lambda: return x * (9.0/5.0) + 32.0;
       unit_of_measurement: "°F" 
     humidity:
-      name: "$roomname Humidty"
+      name: "${roomname} Humidty"
     update_interval: 60s
   - platform: wifi_signal
     name: "${roomname} ESP WiFi Signal Sensor"
@@ -65,7 +65,7 @@ sensor:
 binary_sensor:
   - platform: gpio
     pin: GPIO16
-    name: "$roombame Motion Sensor"
+    name: "${roomname} Motion Sensor"
     device_class: motion
     
 substitutions:
