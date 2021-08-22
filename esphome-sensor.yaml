@@ -69,5 +69,5 @@ binary_sensor:
     device_class: motion
     
 substitutions:
-  roomname: [change this]
-  devicename: [Change this]
+  roomname: room name
+  devicename: device name
